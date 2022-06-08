@@ -1,5 +1,4 @@
 // ========== Types
 // import all types
 
-export * from './IHeadComponentProps';
-export * from './IAuthGlobalStates';
+export * from './SetTokenFunc';

@@ -1,6 +1,7 @@
 // ========== Global Styles
 // import all modules
 import { createGlobalStyle } from 'styled-components';
+import { Fonts } from '../themes';
 
 const GlobalStyles = createGlobalStyle`
 	@font-face {
@@ -21,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
 	html {
 		background-color: white;
 		font-size: 16px;
-		font-family: rubik;
+		font-family: ${Fonts.base};
 	}
 
 	* {

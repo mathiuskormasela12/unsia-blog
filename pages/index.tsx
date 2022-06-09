@@ -4,12 +4,13 @@ import React, { Fragment } from 'react';
 import type { NextPage } from 'next';
 
 // import all components
-import { Head } from '../components';
+import { Head, Navbar } from '../components';
 
 const Home: NextPage = () => (
   <Fragment>
-    <Head title="Home" />
+    <Head title="Mathius" />
     <div>
+      <Navbar />
       <h1>Home</h1>
     </div>
   </Fragment>

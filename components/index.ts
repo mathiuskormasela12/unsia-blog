@@ -1,5 +1,5 @@
 // ========== Components
 // import all components
 
-export * from './Head';
-export * from './Navbar';
+export * from './head/Head';
+export * from './navbar/Navbar';

@@ -3,7 +3,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { Fonts } from '../themes';
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 	@font-face {
 		src: url('/fonts/Rubik-Regular.ttf') format('truetype');
 		font-family: rubik; 
@@ -55,5 +55,3 @@ const GlobalStyles = createGlobalStyle`
 		font-size: 1.8rem;
 	}
 `;
-
-export default GlobalStyles;

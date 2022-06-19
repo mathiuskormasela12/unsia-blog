@@ -3,7 +3,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import NextHead from 'next/head';
-import { IHeadComponentProps } from '../interfaces';
+import { IHeadComponentProps } from '../../interfaces';
 
 export const Head: NextPage<IHeadComponentProps> = (props) => {
   const {

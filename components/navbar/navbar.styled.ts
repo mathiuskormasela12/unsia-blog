@@ -7,7 +7,7 @@ import { Colors } from '../../themes';
 export const NavHero = styled.div<INavbarCollapesProps>`
 	width: 100%;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		${({ toggle }) => {
     if (toggle) {
       return `
@@ -31,7 +31,7 @@ export const Nav = styled.nav`
 	height: 6.4rem;
 	width: 100%;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		height: auto;
 	}
 `;
@@ -45,7 +45,7 @@ export const NavContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		width: 100%;
 	}
 `;
@@ -54,7 +54,7 @@ export const NavBrand = styled.div`
 	width: 10rem;
 	order: 1;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		flex: 5;
 		padding: 1.2rem 0 1.2rem 1.8rem;
 	}
@@ -75,14 +75,14 @@ export const NavList = styled.ul<INavbarCollapesProps>`
 	background-color: white;
 	order: 2;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		order: 3;
 		width: 100%;
 		display: ${({ toggle }) => (toggle ? 'flex' : 'none')};
 	}
 
-	@media (min-width: 1024px) and (max-width: 1400px) {
-		width: 30rem;
+	@media (min-width: 1200px) and (max-width: 1400px) {
+		width: 40rem;
 	}
 `;
 
@@ -93,7 +93,7 @@ export const NavItems = styled.li<INavItemsProps>`
 	font-size: 1rem;
 	padding: 1rem 1.35rem;
 	
-	@media (min-width: 1024px) {
+	@media (min-width: 1200px) {
 		border-radius: 1.2rem;
 	}
 	
@@ -118,7 +118,7 @@ export const NavItems = styled.li<INavItemsProps>`
     return '';
   }}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		width: 100%;
 		text-align: center;
 		margin-right: 0 !important;
@@ -135,7 +135,7 @@ export const NavSide = styled.div`
 		display: none;
 	}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		order: 2;
 		flex: 2;
 		padding-right: 1.8rem;

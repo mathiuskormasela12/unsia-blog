@@ -38,7 +38,7 @@ export const Nav = styled.nav`
 
 export const NavContainer = styled.div`
 	margin: 0 auto;
-	width: calc(100vw - 5rem);
+	width: calc(100vw - 10rem);
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -67,7 +67,7 @@ export const Brand = styled.a`
 `;
 
 export const NavList = styled.ul<INavbarCollapesProps>`
-	width: 60rem;
+	width: 55rem;
 	list-style: none;
 	display: flex;
 	justify-content: center;

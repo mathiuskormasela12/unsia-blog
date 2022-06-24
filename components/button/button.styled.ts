@@ -11,7 +11,7 @@ export const Button = styled.button<IButtonProps>`
 	color: white;
 	background-color: ${Colors.primary};
 	border-radius: ${({ rounded }) => (rounded ? '2em' : '.6em')};
-	padding: .9em 2.2em;
+	padding: .9em 2.4em;
 
 	${({ size }) => {
     if (size === 'lg') {

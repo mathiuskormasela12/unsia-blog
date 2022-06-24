@@ -6,6 +6,7 @@ import { Colors } from '../../themes';
 
 export const NavHero = styled.div<INavbarCollapesProps>`
 	width: 100%;
+	position: absolute;
 
 	@media (max-width: 1200px) {
 		${({ toggle }) => {

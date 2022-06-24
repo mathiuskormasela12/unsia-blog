@@ -10,3 +10,4 @@ export * from './IContainerProps';
 export * from './INavItemsProps';
 export * from './IButtonProps';
 export * from './INavbarCollapseProps';
+export * from './IBalloonProps';

@@ -11,13 +11,20 @@ export const HeroHome = styled.div`
 
 export const HeroWelcome = styled.div`
 	height: calc(100vh - 6.4rem);
-	background-color: white;
+
+	@media (max-width: 768px) and (orientation: landscape) {
+		height: 100vh;
+	}
 `;
 
 export const HeroHomeRow = styled.div`
 	display: flex;
 	height: 100%;
 	align-items: center;
+
+	@media (max-width: 768px) and (orientation: landscape) {
+		align-items: center;
+	}
 `;
 
 export const HeroHomeCol = styled.div`
@@ -75,6 +82,10 @@ export const BalloonContainer = styled.span<IBalloonProps>`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@media (max-width: 768px) and (orientation: landscape) {
+		display: none;
+	}
 
 	& > span {
 		position: absolute !important;

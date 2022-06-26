@@ -37,7 +37,12 @@ const Home: NextPage = () => {
           <Container inheritHeight>
             <Styled.HeroHomeRow>
               <Styled.HeroHomeCol>
-                <Styled.BalloonContainer top left rotate={0}>
+                <Styled.BalloonContainer
+                  top
+                  left
+                  rotate={0}
+                  hiddenWhenSize={0}
+                >
                   <Image
                     src="/icons/balloon.svg"
                     width={80}
@@ -45,7 +50,12 @@ const Home: NextPage = () => {
                     alt="Balloon"
                   />
                 </Styled.BalloonContainer>
-                <Styled.BalloonContainer top right rotate={270}>
+                <Styled.BalloonContainer
+                  top
+                  right
+                  rotate={270}
+                  hiddenWhenSize={0}
+                >
                   <Image
                     src="/icons/balloon.svg"
                     width={80}
@@ -53,7 +63,12 @@ const Home: NextPage = () => {
                     alt="Balloon"
                   />
                 </Styled.BalloonContainer>
-                <Styled.BalloonContainer right bottom rotate={100}>
+                <Styled.BalloonContainer
+                  right
+                  bottom
+                  rotate={100}
+                  hiddenWhenSize={0}
+                >
                   <Image
                     src="/icons/balloon.svg"
                     width={80}
@@ -97,6 +112,113 @@ const Home: NextPage = () => {
             </Styled.HeroHomeRow>
           </Container>
         </Styled.HeroWelcome>
+        <Styled.HeroPortofolio>
+          <Container>
+            <Styled.HeroPortofolioHeader>
+              <Styled.BalloonContainer
+                customPosition={{
+                  top: 5,
+                  left: 14,
+                }}
+                rotate={0}
+                hiddenWhenSize={768}
+              >
+                <Image
+                  src="/icons/balloon.svg"
+                  width={80}
+                  height={80}
+                  alt="Balloon"
+                />
+              </Styled.BalloonContainer>
+              <Styled.BalloonContainer
+                customPosition={{
+                  top: 6,
+                  left: 29,
+                }}
+                rotate={0}
+                hiddenWhenSize={0}
+              >
+                <Image
+                  src="/icons/triangle.svg"
+                  width={20}
+                  height={20}
+                  alt="Balloon"
+                />
+              </Styled.BalloonContainer>
+              <Styled.BalloonContainer
+                customPosition={{
+                  top: 11.2,
+                  right: 30,
+                }}
+                rotate={157}
+                hiddenWhenSize={0}
+              >
+                <Image
+                  src="/icons/triangle.svg"
+                  width={20}
+                  height={20}
+                  alt="Balloon"
+                />
+              </Styled.BalloonContainer>
+              <Styled.HeroHomeTitle>
+                <Styled.PrimaryText>
+                  My Portofolios
+                </Styled.PrimaryText>
+                {' '}
+                Updates
+              </Styled.HeroHomeTitle>
+              <Styled.HeroHomeSubtitle>
+                Let&apos;s write our future
+                with code
+              </Styled.HeroHomeSubtitle>
+              <Styled.BalloonContainer
+                customPosition={{
+                  top: 5,
+                  right: 14,
+                }}
+                rotate={100}
+                hiddenWhenSize={768}
+              >
+                <Image
+                  src="/icons/balloon.svg"
+                  width={80}
+                  height={80}
+                  alt="Balloon"
+                />
+              </Styled.BalloonContainer>
+              <Styled.BalloonContainer
+                customPosition={{
+                  bottom: 13,
+                  left: 29,
+                }}
+                rotate={0}
+                hiddenWhenSize={0}
+              >
+                <Image
+                  src="/icons/triangle.svg"
+                  width={20}
+                  height={20}
+                  alt="Balloon"
+                />
+              </Styled.BalloonContainer>
+              <Styled.BalloonContainer
+                customPosition={{
+                  bottom: 12.5,
+                  right: 26,
+                }}
+                rotate={157}
+                hiddenWhenSize={0}
+              >
+                <Image
+                  src="/icons/triangle.svg"
+                  width={20}
+                  height={20}
+                  alt="Balloon"
+                />
+              </Styled.BalloonContainer>
+            </Styled.HeroPortofolioHeader>
+          </Container>
+        </Styled.HeroPortofolio>
       </Styled.HeroHome>
     </Fragment>
   );

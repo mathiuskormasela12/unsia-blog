@@ -6,4 +6,11 @@ export interface IBalloonProps {
 	left?: boolean;
 	right?: boolean;
 	rotate: number;
+	customPosition?: {
+		top?: number;
+		bottom?: number;
+		left?: number;
+		right?: number;
+	},
+	hiddenWhenSize: number;
 }

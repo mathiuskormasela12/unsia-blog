@@ -38,8 +38,9 @@ const Home: NextPage = () => {
             <Styled.HeroHomeRow>
               <Styled.HeroHomeCol>
                 <Styled.BalloonContainer
-                  top
-                  left
+                  customPosition={{
+                    top: -7,
+                  }}
                   rotate={0}
                   hiddenWhenSize={0}
                 >
@@ -51,8 +52,10 @@ const Home: NextPage = () => {
                   />
                 </Styled.BalloonContainer>
                 <Styled.BalloonContainer
-                  top
-                  right
+                  customPosition={{
+                    top: -5.5,
+                    right: 0,
+                  }}
                   rotate={270}
                   hiddenWhenSize={0}
                 >
@@ -64,8 +67,10 @@ const Home: NextPage = () => {
                   />
                 </Styled.BalloonContainer>
                 <Styled.BalloonContainer
-                  right
-                  bottom
+                  customPosition={{
+                    bottom: -5.5,
+                    right: 0,
+                  }}
                   rotate={100}
                   hiddenWhenSize={0}
                 >
@@ -117,7 +122,7 @@ const Home: NextPage = () => {
             <Styled.HeroPortofolioHeader>
               <Styled.BalloonContainer
                 customPosition={{
-                  top: 5,
+                  top: -2.2,
                   left: 14,
                 }}
                 rotate={0}
@@ -132,7 +137,7 @@ const Home: NextPage = () => {
               </Styled.BalloonContainer>
               <Styled.BalloonContainer
                 customPosition={{
-                  top: 6,
+                  top: 5,
                   left: 29,
                 }}
                 rotate={0}
@@ -147,8 +152,8 @@ const Home: NextPage = () => {
               </Styled.BalloonContainer>
               <Styled.BalloonContainer
                 customPosition={{
-                  top: 11.2,
-                  right: 30,
+                  top: 5,
+                  right: 29,
                 }}
                 rotate={157}
                 hiddenWhenSize={0}
@@ -173,7 +178,7 @@ const Home: NextPage = () => {
               </Styled.HeroHomeSubtitle>
               <Styled.BalloonContainer
                 customPosition={{
-                  top: 5,
+                  top: -2.2,
                   right: 14,
                 }}
                 rotate={100}
@@ -188,7 +193,7 @@ const Home: NextPage = () => {
               </Styled.BalloonContainer>
               <Styled.BalloonContainer
                 customPosition={{
-                  bottom: 13,
+                  bottom: 7.5,
                   left: 29,
                 }}
                 rotate={0}
@@ -203,8 +208,8 @@ const Home: NextPage = () => {
               </Styled.BalloonContainer>
               <Styled.BalloonContainer
                 customPosition={{
-                  bottom: 12.5,
-                  right: 26,
+                  bottom: 6.5,
+                  right: 30,
                 }}
                 rotate={157}
                 hiddenWhenSize={0}

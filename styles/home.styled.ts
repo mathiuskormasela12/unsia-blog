@@ -21,24 +21,20 @@ export const HeroHomeRow = styled.div`
 	display: flex;
 	height: 100%;
 	align-items: center;
-
-	@media (max-width: 768px) and (orientation: landscape) {
-		align-items: center;
-	}
 `;
 
 export const HeroHomeCol = styled.div`
 	flex: 2;
 	position: relative;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		text-align: center;
 	}
 
 	&:last-child {
 		flex: 3;
 
-		@media (max-width: 1024px) {
+		@media (max-width: 1200px) {
 			display: none;
 		}
 	}
@@ -66,11 +62,11 @@ export const PrimaryText = styled.span`
 export const HeroHomeWelcomeContent = styled.div`
 	margin-left: 3.6rem;
 
-	@media (min-width: 1024px) {
+	@media (min-width: 1200px) {
 		width: 20rem;
 	}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		margin-left: 0;
 	}
 `;
@@ -82,15 +78,13 @@ export const BalloonContainer = styled.span<IBalloonProps>`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
 
-	@media (max-width: 768px) and (orientation: landscape) {
+	@media (max-width: 1300px) {
 		display: none;
 	}
 
-	& > span {
-		position: absolute !important;
-		
-		${(props) => {
+	${(props) => {
     let styles = '';
 
     if (!props.customPosition && props.top) {
@@ -148,7 +142,6 @@ export const BalloonContainer = styled.span<IBalloonProps>`
 
     return styles;
   }}
-  }
 `;
 
 export const ImageContainer = styled.span`
@@ -178,6 +171,10 @@ export const HeroPortofolioHeader = styled.header`
 
 	& > h1 {
 		width: 20rem;
+	}
+
+	& > p {
+		width: 10rem;
 	}
 `;
 

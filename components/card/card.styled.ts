@@ -7,6 +7,7 @@ import { Colors } from '../../themes';
 
 export const Card = styled.figure`
 	height: auto;
+	cursor: pointer;
 `;
 
 export const ImageContainer = styled.span`

@@ -1,7 +1,7 @@
 // ========== Home Styles
 // import all modules
 import styled from 'styled-components';
-import { IBalloonProps, ISkillBadgeProps } from '../interfaces';
+import { IBalloonProps, IHeroPortofolioMainColProps, ISkillBadgeProps } from '../interfaces';
 import { Colors } from '../themes';
 
 export const HeroHome = styled.div`
@@ -222,4 +222,69 @@ export const SkillBadge = styled.span<ISkillBadgeProps>`
 
     return '';
   }}
+`;
+
+export const HeroPortofolioMain = styled.main`
+	margin-top: 1.2rem;
+`;
+
+export const HeroPortofolioMainRow = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	background: blue;
+`;
+
+export const HeroPortofolioMainCol = styled.div<IHeroPortofolioMainColProps>`
+	width: 32%;
+	height: 15rem;
+	background: red;
+	margin-right: auto;
+
+	@media (min-width: 1200px) {
+		&:nth-child(3n + 0) {
+			margin-right: 0 !important;
+		}
+	
+		${({ count }) => {
+    if (count % 3 === 2) {
+      return `
+					&:nth-child(${count - 1}) {
+						margin-right: 2% !important;
+					}
+				`;
+    }
+
+    return '';
+  }}
+	}
+
+	@media (min-width: 600px) and (max-width: 1024px) {
+		&:nth-child(2n + 0) {
+			margin-right: 0 !important;
+		}
+	
+		${({ count }) => {
+    if (count % 2 === 2) {
+      return `
+						&:nth-child(${count - 1}) {
+							margin-right: 2% !important;
+						}
+					`;
+    }
+
+    return '';
+  }}
+	}
+	
+	&:not(&:last-child) {
+		margin-bottom: 1.2rem;
+	}
+
+	@media (max-width: 600px) {
+		width: 100%;
+	}
+
+	@media (min-width: 600px) and (max-width: 1024px) {
+		width: 48%;
+	}
 `;

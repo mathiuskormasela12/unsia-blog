@@ -1,6 +1,6 @@
 // ========== Home
 // import all modules
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,6 +19,9 @@ import {
 const Home: NextPage = () => {
   const dispatch = useDispatch();
   const accessToken: string = useSelector((current:IGlobalStates) => current.auth.accessToken);
+  const [state, setState] = useState<any>({
+    portofolios: [],
+  });
 
   const handleToken = () => {
     if (accessToken === '') {
@@ -27,6 +30,13 @@ const Home: NextPage = () => {
       dispatch(setToken('', ''));
     }
   };
+
+  useEffect(() => {
+    setState((current: any) => ({
+      ...current,
+      portofolios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    }));
+  }, []);
 
   return (
     <Fragment>
@@ -222,6 +232,17 @@ const Home: NextPage = () => {
                 />
               </Styled.BalloonContainer>
             </Styled.HeroPortofolioHeader>
+            <Styled.HeroPortofolioMain>
+              <Styled.HeroPortofolioMainRow>
+                {state.portofolios.map((item: any, index: any) => (
+                  <Styled.HeroPortofolioMainCol
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={index.toString()}
+                    count={state.portofolios.length}
+                  />
+                ))}
+              </Styled.HeroPortofolioMainRow>
+            </Styled.HeroPortofolioMain>
           </Container>
         </Styled.HeroPortofolio>
       </Styled.HeroHome>

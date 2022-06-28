@@ -12,3 +12,4 @@ export * from './IButtonProps';
 export * from './INavbarCollapseProps';
 export * from './IBalloonProps';
 export * from './ISkillBadgeProps';
+export * from './IHeroPortofolioMainColProps';

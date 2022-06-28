@@ -24,6 +24,10 @@ export const Navbar: NextPage = () => {
   ) => current.authTemporary.accessToken);
   const navItems = (accessToken !== '' || accessTokenTemporary !== '') ? NAV_ITEMS.ADMIN : NAV_ITEMS.USER;
 
+  const handleMoveToOtherWebsite = (link: string) => {
+    window.location.href = link;
+  };
+
   return (
     <Styled.NavHero toggle={toggle}>
       <Styled.Nav>
@@ -53,6 +57,7 @@ export const Navbar: NextPage = () => {
               type="button"
               size="md"
               rounded
+              onClick={() => handleMoveToOtherWebsite('https://www.linkedin.com/in/mathiuskormasela/')}
             >
               Hire Me
             </Button>

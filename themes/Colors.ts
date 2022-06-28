@@ -15,4 +15,5 @@ export const Colors = {
   dark: '#2D4379',
   light: '#586991',
   gray: '#575757',
+  footerColor: '#F6F6F6',
 };

@@ -17,3 +17,4 @@ export * from './IPortofolios';
 export * from './IHomeStates';
 export * from './ITechnology';
 export * from './ICardProps';
+export * from './IListItemsProps';

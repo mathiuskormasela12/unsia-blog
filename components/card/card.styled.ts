@@ -7,10 +7,6 @@ import { Colors } from '../../themes';
 
 export const Card = styled.figure`
 	height: auto;
-
-	&:first-child {
-		// background: red;
-	}
 `;
 
 export const ImageContainer = styled.span`
@@ -88,4 +84,5 @@ export const SkillBadge = styled.span<ISkillBadgeProps>`
 
 export const Image = styled(NextImage)`
 	height: 15rem;
+	border-radius: 1.8rem;
 `;

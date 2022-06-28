@@ -54,28 +54,4 @@ export const GlobalStyles = createGlobalStyle`
 	h6 {
 		font-size: 1.8rem;
 	}
-
-	@media (max-width: 600px) {
-		html {
-			font-size: 12.5px;
-		}
-	}
-
-	@media (min-width: 600px) and (max-width: 768px) {
-		html {
-			font-size: 13px;
-		}
-	}
-
-	@media (min-width: 768px) and (max-width: 920px) {
-		html {
-			font-size: 14px;
-		}
-	}
-
-	@media (min-width: 920px) and (max-width: 1024px) {
-		html {
-			font-size: 15px;
-		}
-	}
 `;

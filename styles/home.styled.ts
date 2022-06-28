@@ -1,7 +1,7 @@
 // ========== Home Styles
 // import all modules
 import styled from 'styled-components';
-import { IBalloonProps, IHeroPortofolioMainColProps, ISkillBadgeProps } from '../interfaces';
+import { IBalloonProps, IHeroPortofolioMainColProps } from '../interfaces';
 import { Colors } from '../themes';
 
 export const HeroHome = styled.div`
@@ -178,52 +178,6 @@ export const HeroPortofolioHeader = styled.header`
 	}
 `;
 
-export const SkillBadge = styled.span<ISkillBadgeProps>`
-	display: inline-block;
-	font-size: 1rem;
-	padding: .4em .8em;
-	border-radius: 1.2em;
-	font-weight: bold;
-	margin-right: .4rem;
-	margin-bottom: .8rem;
-
-	&:last-child {
-		margin-right: 0;
-	}
-
-	${(props) => {
-    if (props.variant === 'primary') {
-      return `
-				background-color: ${Colors.lightBlue};
-				color: ${Colors.lightBlueText};
-			`;
-    }
-
-    if (props.variant === 'secondary') {
-      return `
-				background-color: ${Colors.lightPurple};
-				color: ${Colors.lightPurpleText};
-			`;
-    }
-
-    if (props.variant === 'tertiary') {
-      return `
-				background-color: ${Colors.lightGreen};
-				color: ${Colors.lightGreenText};
-			`;
-    }
-
-    if (props.variant === 'quaternary') {
-      return `
-				background-color: ${Colors.lightOrange};
-				color: ${Colors.lightOrangeText};
-			`;
-    }
-
-    return '';
-  }}
-`;
-
 export const HeroPortofolioMain = styled.main`
 	margin-top: 1.2rem;
 `;
@@ -231,13 +185,10 @@ export const HeroPortofolioMain = styled.main`
 export const HeroPortofolioMainRow = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	background: blue;
 `;
 
 export const HeroPortofolioMainCol = styled.div<IHeroPortofolioMainColProps>`
-	width: 32%;
-	height: 15rem;
-	background: red;
+	width: 29%;
 	margin-right: auto;
 
 	@media (min-width: 1200px) {
@@ -249,7 +200,7 @@ export const HeroPortofolioMainCol = styled.div<IHeroPortofolioMainColProps>`
     if (count % 3 === 2) {
       return `
 					&:nth-child(${count - 1}) {
-						margin-right: 2% !important;
+						margin-right: 6% !important;
 					}
 				`;
     }
@@ -277,7 +228,7 @@ export const HeroPortofolioMainCol = styled.div<IHeroPortofolioMainColProps>`
 	}
 	
 	&:not(&:last-child) {
-		margin-bottom: 1.2rem;
+		margin-bottom: 2.2rem;
 	}
 
 	@media (max-width: 600px) {

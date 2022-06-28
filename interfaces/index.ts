@@ -13,3 +13,7 @@ export * from './INavbarCollapseProps';
 export * from './IBalloonProps';
 export * from './ISkillBadgeProps';
 export * from './IHeroPortofolioMainColProps';
+export * from './IPortofolios';
+export * from './IHomeStates';
+export * from './ITechnology';
+export * from './ICardProps';

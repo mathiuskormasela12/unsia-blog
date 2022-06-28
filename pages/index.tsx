@@ -5,7 +5,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
 import { setToken } from '../redux/actions';
-import { IGlobalStates } from '../interfaces';
+import { IGlobalStates, IHomeStates } from '../interfaces';
 import * as Styled from '../styles';
 
 // import all components
@@ -14,13 +14,15 @@ import {
   Navbar,
   Container,
   Button,
+  Card,
 } from '../components';
 
 const Home: NextPage = () => {
   const dispatch = useDispatch();
   const accessToken: string = useSelector((current:IGlobalStates) => current.auth.accessToken);
-  const [state, setState] = useState<any>({
+  const [state, setState] = useState<IHomeStates>({
     portofolios: [],
+    loading: false,
   });
 
   const handleToken = () => {
@@ -32,9 +34,263 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    setState((current: any) => ({
+    setState((current: IHomeStates) => ({
       ...current,
-      portofolios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      portofolios: [
+        {
+          id: 1,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 2,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 3,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 4,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 5,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 7,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 8,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 9,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 10,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+        {
+          id: 11,
+          title: 'Belajar Dasar Node Js',
+          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
+          img: '/images/nodejs.png',
+          technologies: [
+            {
+              id: 1,
+              name: 'Node Js',
+              variant: 'primary',
+            },
+            {
+              id: 2,
+              name: 'React Js',
+              variant: 'secondary',
+            },
+            {
+              id: 4,
+              name: 'MySQL',
+              variant: 'tertiary',
+            },
+          ],
+        },
+      ],
     }));
   }, []);
 
@@ -234,12 +490,19 @@ const Home: NextPage = () => {
             </Styled.HeroPortofolioHeader>
             <Styled.HeroPortofolioMain>
               <Styled.HeroPortofolioMainRow>
-                {state.portofolios.map((item: any, index: any) => (
+                {state.portofolios.map((item, index) => (
                   <Styled.HeroPortofolioMainCol
                     // eslint-disable-next-line react/no-array-index-key
                     key={index.toString()}
                     count={state.portofolios.length}
-                  />
+                  >
+                    <Card
+                      title={item.title}
+                      description={item.description}
+                      img={item.img}
+                      technologies={item.technologies}
+                    />
+                  </Styled.HeroPortofolioMainCol>
                 ))}
               </Styled.HeroPortofolioMainRow>
             </Styled.HeroPortofolioMain>

@@ -15,12 +15,12 @@ export const NAV_ITEMS = {
     {
       id: 3,
       text: 'Material',
-      path: '#material',
+      path: '#footer',
     },
     {
       id: 4,
       text: 'Contact',
-      path: '#contact',
+      path: '#footer',
     },
   ],
   ADMIN: [
@@ -47,7 +47,7 @@ export const NAV_ITEMS = {
     {
       id: 5,
       text: 'Contact',
-      path: '#contact',
+      path: '#footer',
     },
   ],
 };

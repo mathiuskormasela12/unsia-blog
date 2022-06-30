@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <Styled.Footer>
+    <Styled.Footer id="footer">
       <Styled.FooterContainer>
         <Styled.FooterTitle>
           &copy; Awesome Developer 2022

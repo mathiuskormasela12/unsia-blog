@@ -8,6 +8,7 @@ import storage from '../storage';
 // import all reducers
 import authReducer from './auth';
 import authTemporaryReducer from './authTemporary';
+import articlesReducer from './articles';
 
 const rootPersistConfig = {
   key: 'root',
@@ -21,9 +22,16 @@ const authPersistConfig = {
   stateReconciler: hardSet,
 };
 
+const articlesPersistConfig = {
+  key: 'articles',
+  storage,
+  stateReconciler: hardSet,
+};
+
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
   authTemporary: authTemporaryReducer,
+  articles: persistReducer(articlesPersistConfig, articlesReducer),
 });
 
 export default persistReducer(rootPersistConfig, rootReducer);

@@ -1,4 +1,6 @@
 // ========== IGlobalStates
+// import all modules
+import { IPortofolios } from './IPortofolios';
 
 export interface IGlobalStates {
 	auth: {
@@ -8,5 +10,8 @@ export interface IGlobalStates {
 	authTemporary: {
 		accessToken: string;
 		refreshToken: string
-	}
+	},
+	articles: {
+		articles: IPortofolios[]
+	},
 }

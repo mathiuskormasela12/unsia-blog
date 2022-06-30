@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
 		background-color: white;
 		font-size: 16px;
 		font-family: ${Fonts.base};
+		scroll-behavior: smooth;
 	}
 
 	* {

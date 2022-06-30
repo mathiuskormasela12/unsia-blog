@@ -18,3 +18,5 @@ export * from './IHomeStates';
 export * from './ITechnology';
 export * from './ICardProps';
 export * from './IListItemsProps';
+export * from './IArticlesGlobalStates';
+export * from './IArticlesReduxAction';

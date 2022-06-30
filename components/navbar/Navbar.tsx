@@ -57,7 +57,7 @@ export const Navbar: NextPage = () => {
               type="button"
               size="md"
               rounded
-              onClick={() => handleMoveToOtherWebsite('https://www.linkedin.com/in/mathiuskormasela/')}
+              onClick={() => handleMoveToOtherWebsite('https://www.youtube.com/channel/UC5eUSF2W_vAkYA6wdilJjOw')}
             >
               My Videos
             </Button>

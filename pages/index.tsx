@@ -1,13 +1,12 @@
 // ========== Home
 // import all modules
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-import { setToken } from '../redux/actions';
-import { IGlobalStates, IHomeStates } from '../interfaces';
+import { useDispatch, useSelector } from 'react-redux';
 import * as Styled from '../styles';
+import data from '../data/articles';
 
 // import all components
 import {
@@ -18,284 +17,19 @@ import {
   Card,
   Footer,
 } from '../components';
+import { setArticles } from '../redux/actions';
+import { IGlobalStates, IPortofolios } from '../interfaces';
 
 const Home: NextPage = () => {
-  const dispatch = useDispatch();
   const router = useRouter();
-  const accessToken: string = useSelector((current:IGlobalStates) => current.auth.accessToken);
-  const [state, setState] = useState<IHomeStates>({
-    portofolios: [],
-    loading: false,
-  });
-
-  const handleToken = () => {
-    if (accessToken === '') {
-      dispatch(setToken(String(Date.now()), String(Date.now())));
-    } else {
-      dispatch(setToken('', ''));
-    }
-  };
+  const dispatch = useDispatch();
+  const articles: IPortofolios[] = useSelector(
+    (current: IGlobalStates) => current.articles.articles,
+  );
 
   useEffect(() => {
-    setState((current: IHomeStates) => ({
-      ...current,
-      portofolios: [
-        {
-          id: 1,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 2,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 3,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 4,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 5,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 6,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 7,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 8,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 9,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 10,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-        {
-          id: 11,
-          title: 'Belajar Dasar Node Js',
-          description: 'Belajar  membuat aplikasi crud sederhana dengan menggunakan Node Js (Express) dan MySQL. Membuat login & register serta input, ubah dan hapus data.',
-          img: '/images/wkw.jpg',
-          technologies: [
-            {
-              id: 1,
-              name: 'Node Js',
-              variant: 'primary',
-            },
-            {
-              id: 2,
-              name: 'React Js',
-              variant: 'secondary',
-            },
-            {
-              id: 4,
-              name: 'MySQL',
-              variant: 'tertiary',
-            },
-          ],
-        },
-      ],
-    }));
-  }, []);
+    dispatch(setArticles(data));
+  }, [dispatch]);
 
   return (
     <Fragment>
@@ -367,7 +101,9 @@ const Home: NextPage = () => {
                     type="button"
                     size="md"
                     rounded
-                    onClick={handleToken}
+                    onClick={() => {
+                      window.location.href = '#articles';
+                    }}
                   >
                     Let&apos;s Read
                   </Button>
@@ -386,7 +122,7 @@ const Home: NextPage = () => {
             </Styled.HeroHomeRow>
           </Container>
         </Styled.HeroWelcome>
-        <Styled.HeroPortofolio>
+        <Styled.HeroPortofolio id="articles">
           <Container>
             <Styled.HeroPortofolioHeader>
               <Styled.BalloonContainer
@@ -493,11 +229,11 @@ const Home: NextPage = () => {
             </Styled.HeroPortofolioHeader>
             <Styled.HeroPortofolioMain>
               <Styled.HeroPortofolioMainRow>
-                {state.portofolios.map((item, index) => (
+                {articles.map((item, index) => (
                   <Styled.HeroPortofolioMainCol
                     // eslint-disable-next-line react/no-array-index-key
                     key={index.toString()}
-                    count={state.portofolios.length}
+                    count={articles.length}
                   >
                     <Card
                       title={item.title}
@@ -505,7 +241,7 @@ const Home: NextPage = () => {
                       img={item.img}
                       technologies={item.technologies}
                       onClick={() => {
-                        router.push(`/detail/${String(2)}`);
+                        router.push(`/detail/${String(item.id)}`);
                       }}
                     />
                   </Styled.HeroPortofolioMainCol>

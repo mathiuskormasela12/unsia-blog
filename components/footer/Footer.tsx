@@ -12,10 +12,10 @@ export const Footer: React.FC = () => {
     <Styled.Footer>
       <Styled.FooterContainer>
         <Styled.FooterTitle>
-          &copy; Mathius Kormasela 2022
+          &copy; Awesome Developer 2022
         </Styled.FooterTitle>
         <Styled.FooterTitle>
-          My Personal Website
+          Our Learning Platform
         </Styled.FooterTitle>
         <Styled.FooterTitle>
           let&apos;s writes our future with code
@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
         <Styled.FooterContent>
           <Styled.FooterContentCol>
             <Styled.ListTitle>
-              Frontend Skills
+              Frontend Articles
             </Styled.ListTitle>
             <Styled.ListContent>
               <Styled.ListItems>
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
           </Styled.FooterContentCol>
           <Styled.FooterContentCol>
             <Styled.ListTitle>
-              Backend Skills
+              Backend Articles
             </Styled.ListTitle>
             <Styled.ListContent>
               <Styled.ListItems>
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
                 pointer
                 onClick={() => handleMoveToOtherWebsite('https://www.youtube.com/channel/UC5eUSF2W_vAkYA6wdilJjOw/videos')}
               >
-                @mathius
+                @awsdev
               </Styled.ListItems>
             </Styled.ListContent>
           </Styled.FooterContentCol>
@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
           </Styled.FooterContentCol>
         </Styled.FooterContent>
         <Styled.FooterTitle>
-          Created with love by Mathius
+          Created with love by Team
         </Styled.FooterTitle>
         <Styled.FooterTitle>
           in Jakarta 2022

@@ -15,7 +15,7 @@ export const Head: NextPage<IHeadComponentProps> = (props) => {
       <title>
         {title}
         {' '}
-        | Personal Website
+        | My Blog
       </title>
       <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
     </NextHead>

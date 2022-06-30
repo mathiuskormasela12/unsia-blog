@@ -299,7 +299,7 @@ const Home: NextPage = () => {
 
   return (
     <Fragment>
-      <Head title="Mathius" />
+      <Head title="Home" />
       <Styled.HeroHome>
         <Navbar />
         <Styled.HeroWelcome>
@@ -352,16 +352,16 @@ const Home: NextPage = () => {
                 </Styled.BalloonContainer>
                 <Styled.HeroHomeWelcomeContent>
                   <Styled.HeroHomeTitle>
-                    Hi I&apos;m
+                    Hi, Welcome to
                     {' '}
                     <Styled.PrimaryText>
-                      a Fullstack Developer
+                      Awesome Developer
                     </Styled.PrimaryText>
                     .
                   </Styled.HeroHomeTitle>
                   <Styled.HeroHomeSubtitle>
-                    Hi I&apos;m Mathius a fullstack developer
-                    with 1+ years working experiences.
+                    We will share some articles about
+                    web programming and mobile programming.
                   </Styled.HeroHomeSubtitle>
                   <Button
                     type="button"
@@ -369,7 +369,7 @@ const Home: NextPage = () => {
                     rounded
                     onClick={handleToken}
                   >
-                    Download CV
+                    Let&apos;s Read
                   </Button>
                 </Styled.HeroHomeWelcomeContent>
               </Styled.HeroHomeCol>
@@ -436,7 +436,7 @@ const Home: NextPage = () => {
               </Styled.BalloonContainer>
               <Styled.HeroHomeTitle>
                 <Styled.PrimaryText>
-                  My Portofolios
+                  Our Articles
                 </Styled.PrimaryText>
                 {' '}
                 Updates

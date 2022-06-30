@@ -35,7 +35,7 @@ export const Navbar: NextPage = () => {
           <Styled.NavBrand>
             <Link href="/" passHref>
               <Styled.Brand>
-                Mathius
+                AwsDev
               </Styled.Brand>
             </Link>
           </Styled.NavBrand>
@@ -59,7 +59,7 @@ export const Navbar: NextPage = () => {
               rounded
               onClick={() => handleMoveToOtherWebsite('https://www.linkedin.com/in/mathiuskormasela/')}
             >
-              Hire Me
+              My Videos
             </Button>
             {toggle ? (
               <GrClose

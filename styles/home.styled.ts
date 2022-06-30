@@ -63,7 +63,7 @@ export const HeroHomeWelcomeContent = styled.div`
 	margin-left: 3.6rem;
 
 	@media (min-width: 1200px) {
-		width: 20rem;
+		width: 24rem;
 	}
 
 	@media (max-width: 1200px) {

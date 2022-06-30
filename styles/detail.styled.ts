@@ -50,5 +50,9 @@ export const ImageContainerHeroDetail = styled.span`
 		border-radius: 1.8rem;
 		width: 38rem !important;
 		height: 22rem !important;
+
+		@media (max-width: 1024px) {
+			width: 90vw !important;
+		}
 	}
 `;

@@ -4,6 +4,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 import { setToken } from '../redux/actions';
 import { IGlobalStates, IHomeStates } from '../interfaces';
 import * as Styled from '../styles';
@@ -15,10 +16,12 @@ import {
   Container,
   Button,
   Card,
+  Footer,
 } from '../components';
 
 const Home: NextPage = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
   const accessToken: string = useSelector((current:IGlobalStates) => current.auth.accessToken);
   const [state, setState] = useState<IHomeStates>({
     portofolios: [],
@@ -31,10 +34,6 @@ const Home: NextPage = () => {
     } else {
       dispatch(setToken('', ''));
     }
-  };
-
-  const handleMoveToOtherWebsite = (link: string) => {
-    window.location.href = link;
   };
 
   useEffect(() => {
@@ -505,6 +504,9 @@ const Home: NextPage = () => {
                       description={item.description}
                       img={item.img}
                       technologies={item.technologies}
+                      onClick={() => {
+                        router.push(`/detail/${String(2)}`);
+                      }}
                     />
                   </Styled.HeroPortofolioMainCol>
                 ))}
@@ -512,113 +514,7 @@ const Home: NextPage = () => {
             </Styled.HeroPortofolioMain>
           </Container>
         </Styled.HeroPortofolio>
-        <Styled.Footer>
-          <Styled.FooterContainer>
-            <Styled.FooterTitle>
-              &copy; Mathius Kormasela 2022
-            </Styled.FooterTitle>
-            <Styled.FooterTitle>
-              My Personal Website
-            </Styled.FooterTitle>
-            <Styled.FooterTitle>
-              let&apos;s writes our future with code
-            </Styled.FooterTitle>
-            <Styled.FooterContent>
-              <Styled.FooterContentCol>
-                <Styled.ListTitle>
-                  Frontend Skills
-                </Styled.ListTitle>
-                <Styled.ListContent>
-                  <Styled.ListItems>
-                    HTML
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    CSS
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    Javascript
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    Typescript
-                  </Styled.ListItems>
-                </Styled.ListContent>
-              </Styled.FooterContentCol>
-              <Styled.FooterContentCol>
-                <Styled.ListTitle>
-                  Backend Skills
-                </Styled.ListTitle>
-                <Styled.ListContent>
-                  <Styled.ListItems>
-                    Node Js
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    Express Js
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    Nest Js
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    MySQL
-                  </Styled.ListItems>
-                  <Styled.ListItems>
-                    Mongodb
-                  </Styled.ListItems>
-                </Styled.ListContent>
-              </Styled.FooterContentCol>
-              <Styled.FooterContentCol>
-                <Styled.ListTitle>
-                  Social Media
-                </Styled.ListTitle>
-                <Styled.ListContent>
-                  <Styled.ListItems
-                    pointer
-                    onClick={() => handleMoveToOtherWebsite('https://www.facebook.com/mathiuskormasela/')}
-                  >
-                    Facebook
-                  </Styled.ListItems>
-                  <Styled.ListItems
-                    pointer
-                    onClick={() => handleMoveToOtherWebsite('https://twitter.com/Mathius87248424')}
-                  >
-                    Twitter
-                  </Styled.ListItems>
-                </Styled.ListContent>
-              </Styled.FooterContentCol>
-              <Styled.FooterContentCol>
-                <Styled.ListTitle>
-                  Youtube
-                </Styled.ListTitle>
-                <Styled.ListContent>
-                  <Styled.ListItems
-                    pointer
-                    onClick={() => handleMoveToOtherWebsite('https://www.youtube.com/channel/UC5eUSF2W_vAkYA6wdilJjOw/videos')}
-                  >
-                    @mathius
-                  </Styled.ListItems>
-                </Styled.ListContent>
-              </Styled.FooterContentCol>
-              <Styled.FooterContentCol>
-                <Styled.ListTitle>
-                  Contact
-                </Styled.ListTitle>
-                <Styled.ListContent>
-                  <Styled.ListItems title="mathiuskormasela12@gmail.com">
-                    Email
-                  </Styled.ListItems>
-                  <Styled.ListItems title="+62-811-1906-204">
-                    WhatsApp
-                  </Styled.ListItems>
-                </Styled.ListContent>
-              </Styled.FooterContentCol>
-            </Styled.FooterContent>
-            <Styled.FooterTitle>
-              Created with love by Mathius
-            </Styled.FooterTitle>
-            <Styled.FooterTitle>
-              in Jakarta 2022
-            </Styled.FooterTitle>
-          </Styled.FooterContainer>
-        </Styled.Footer>
+        <Footer />
       </Styled.HeroHome>
     </Fragment>
   );

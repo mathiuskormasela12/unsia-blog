@@ -10,10 +10,11 @@ export const Card: React.FC<ICardProps> = (props) => {
     description,
     technologies,
     img,
+    onClick,
   } = props;
 
   return (
-    <Styled.Card>
+    <Styled.Card onClick={onClick}>
       <Styled.Image
         src={img}
         alt={title}

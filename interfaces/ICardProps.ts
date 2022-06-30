@@ -1,5 +1,6 @@
 // ========== ICardProps
 // import all modules
+import React from 'react';
 import { ITechnology } from './ITechnology';
 
 export interface ICardProps {
@@ -7,4 +8,5 @@ export interface ICardProps {
 	description: string;
 	img: string;
 	technologies: ITechnology[];
+	onClick: React.MouseEventHandler<HTMLElement>;
 }

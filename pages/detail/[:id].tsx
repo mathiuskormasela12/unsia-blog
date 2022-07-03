@@ -17,7 +17,6 @@ import { IGlobalStates, IPortofolios } from '../../interfaces';
 
 const Detail: React.FC = () => {
   const router = useRouter();
-  const { id = 1 } = router.query;
 
   const articlesRedux: IPortofolios[] = useSelector(
     (current: IGlobalStates) => current.articles.articles,
@@ -26,12 +25,12 @@ const Detail: React.FC = () => {
   const [articles, setArticles] = useState<IPortofolios[]>([]);
 
   useEffect(() => {
-    const modified = articlesRedux.filter((item) => item.id === Number(id));
-    // window.alert(id);
-    // console.log()
-    setArticles(modified);
+    if (router.isReady) {
+      const modified = articlesRedux.filter((item) => item.id === Number(router.query[':id']));
+      setArticles(modified);
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [router.isReady]);
 
   return (
     <Fragment>

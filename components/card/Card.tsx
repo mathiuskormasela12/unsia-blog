@@ -36,7 +36,7 @@ export const Card: React.FC<ICardProps> = (props) => {
         {title}
       </Styled.CardTitle>
       <Styled.CardDescription>
-        {description}
+        {description.slice(0, 150).concat('...')}
       </Styled.CardDescription>
     </Styled.Card>
   );
